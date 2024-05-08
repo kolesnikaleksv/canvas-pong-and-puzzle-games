@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css"></link>
+  <title>Document</title>
+</head>
+<body style="display: flex; flex-wrap: wrap;">
+  <div>hello world</div>
+  <canvas id="canvas">Update your browser</canvas>
+
+  <canvas id="puzzle15">Пора уже в этой жизни что-то менять</canvas>
+
+  <!-- <canvas id='house'>Обновите браузер</canvas>
+  <script>
+      var house = document.getElementById('house'), // Задаём контекст
+        houseContect       = house.getContext('2d'),           // Контекст холста
+        cellSize  = 32,                                 // Размер одной ячейки на карте
+        pic       = new Image(),                        // "Создаём" изображение
+        map       =                                     // Карта уровня двумерным массивом
+        [
+          [{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4}], // 1ый ряд
+          [{x:1,y:4},{x:1,y:1},{x:2,y:1},{x:3,y:1},{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4}], // 2ый ряд
+          [{x:1,y:4},{x:1,y:2},{x:2,y:2},{x:3,y:2},{x:1,y:4},{x:1,y:3},{x:1,y:3},{x:1,y:3}], // 3ый ряд
+          [{x:1,y:4},{x:3,y:4},{x:2,y:3},{x:3,y:4},{x:1,y:4},{x:1,y:3},{x:1,y:4},{x:1,y:4}], // 4ый ряд
+          [{x:1,y:4},{x:3,y:4},{x:2,y:4},{x:3,y:4},{x:1,y:4},{x:1,y:3},{x:1,y:4},{x:1,y:4}], // 5ый ряд
+          [{x:1,y:4},{x:1,y:4},{x:1,y:3},{x:1,y:4},{x:1,y:4},{x:1,y:3},{x:1,y:4},{x:1,y:4}], // 6ый ряд
+          [{x:1,y:4},{x:1,y:4},{x:1,y:3},{x:1,y:3},{x:1,y:3},{x:1,y:3},{x:1,y:4},{x:1,y:4}], // 7ый ряд
+          [{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4},{x:1,y:4}]  // 8ый ряд
+        ]; // Первая и вторая координата (x и y соответственно) задают фрагмент в исходном изображении
+      // Размер холста равный 8х8 клеток
+      house.width  = 8 * cellSize;
+      house.height = 8 * cellSize;
+      pic.src = 'https://habrastorage.org/getpro/habr/post_images/e85/727/cb1/e85727cb1a88099325eaf5b243d4c41f.png';
+      pic.onload = function() {  // Событие onLoad, ждём момента пока загрузится изображение
+        for (var j = 0 ; j < 8; j ++)
+          for (var i = 0; i < 8; i ++)
+            // перебираем все значения массива 'карта' и в зависимости от координат вырисовываем нужный нам фрагмент
+            houseContect.drawImage(pic, (map[i][j].x-1)*cellSize, (map[i][j].y-1)*cellSize, 32, 32, j*cellSize, i*cellSize, 32, 32);
+      }
+  </script> -->
+  <!-- <canvas id='example3'>Обновите браузер</canvas> -->
+  <!-- <canvas id='example1'>Обновите браузер</canvas>
+  <canvas id='example'>Обновите браузер</canvas>
+  <canvas id='example2'>Обновите браузер</canvas> -->
+
+
+  <!-- <script>
+    var example3 = document.getElementById("example3"),
+      ctx       = example3.getContext('2d'), // Контекст
+      pic       = new Image();              // "Создаём" изображение
+      example3.height = 300;
+    example3.height = 450;
+      pic.src    = 'http://habrahabr.ru/i/nocopypast.png';  // Источник изображения, позаимствовано на хабре
+      pic.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+        // ctx.drawImage(pic, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+        // ctx.drawImage(pic, 0, 0, 300, 150);
+        ctx.drawImage(pic, 25, 42, 85, 55, 0, 0, 170, 110);
+      }
+      
+  </script> -->
+  <!-- <script>
+    var example2 = document.getElementById("example2"),
+    ctx = example2.getContext('2d');
+    example2.height = 440;
+    example2.width  = 380;
+    ctx.beginPath();
+    ctx.fillStyle = "#FFA500";
+    ctx.strokeStyle = "#FFA500";
+    ctx.moveTo(10, 15);
+    ctx.bezierCurveTo(75, 55, 175, 20, 250, 15);
+    ctx.moveTo(10, 15);
+    ctx.quadraticCurveTo(100, 100, 250, 15);
+    ctx.stroke();
+  </script>
+  <script>
+    var example1 = document.getElementById("example1"),
+    ctx = example1.getContext('2d');
+    example1.width  = 440;
+    example1.height = 380;
+    ctx.beginPath();
+    ctx.arc(80, 100, 56, 3/4 * Math.PI, 1/4 * Math.PI, true);
+    ctx.fill(); // *14
+    ctx.moveTo(40, 140);
+    ctx.lineTo(20, 40);
+    ctx.lineTo(60, 100);
+    ctx.lineTo(80, 20);
+    ctx.lineTo(100, 100);
+    ctx.lineTo(140, 40);
+    ctx.lineTo(120, 140);
+    ctx.stroke(); // *22
+  </script>
+  <script>
+      var example = document.getElementById("example"),
+      ctx = example.getContext('2d');
+      example.width  = 440;
+      example.height = 380;
+      ctx.strokeStyle = '#B70A02';
+      ctx.strokeRect(15, 15, 266, 266);
+      ctx.strokeRect(18, 18, 260, 260);
+      ctx.fillStyle = '#AF5200'; 
+      ctx.fillRect(20, 20, 256, 256);
+      for (i = 0; i < 8; i += 2)
+          for (j = 0; j < 8; j += 2) {
+              ctx.clearRect(20 + i * 32, 20 + j * 32, 32, 32);
+              ctx.clearRect(20 + (i + 1) * 32, 20 + (j + 1) * 32, 32, 32);
+          }
+  </script> -->
+  <!-- <label class="switch">
+    <input class="switch__input" type="checkbox" role="switch">
+    <span class="switch__base-outer"></span>
+    <span class="switch__base-inner"></span>
+    <svg class="switch__base-neon" viewBox="0 0 40 24" width="40px" height="24px">
+      <defs>
+        <filter id="switch-glow">
+          <feGaussianBlur result="coloredBlur" stddeviation="1"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+        <linearGradient id="switch-gradient1" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="hsl(var(--on-hue1),90%,70%)" />
+          <stop offset="100%" stop-color="hsl(var(--on-hue2),90%,70%)" />
+        </linearGradient>
+        <linearGradient id="switch-gradient2" x1="0.7" y1="0" x2="0.3" y2="1">
+          <stop offset="25%" stop-color="hsla(var(--on-hue1),90%,70%,0)" />
+          <stop offset="50%" stop-color="hsla(var(--on-hue1),90%,70%,0.3)" />
+          <stop offset="100%" stop-color="hsla(var(--on-hue2),90%,70%,0.3)" />
+        </linearGradient>
+      </defs>
+      <path fill="none" filter="url(#switch-glow)" stroke="url(#switch-gradient1)" stroke-width="1" stroke-dasharray="0 104.26 0" stroke-dashoffset="0.01" stroke-linecap="round" d="m.5,12C.5,5.649,5.649.5,12,.5h16c6.351,0,11.5,5.149,11.5,11.5s-5.149,11.5-11.5,11.5H12C5.649,23.5.5,18.351.5,12Z"/>
+    </svg>
+    <span class="switch__knob-shadow"></span>
+    <span class="switch__knob-container">
+      <span class="switch__knob">
+        <svg class="switch__knob-neon" viewBox="0 0 48 48" width="48px" height="48px">
+          <circle fill="none" stroke="url(#switch-gradient2)" stroke-dasharray="0 90.32 0 54.19" stroke-linecap="round" stroke-width="1" r="23" cx="24" cy="24" transform="rotate(-112.5,24,24)" />
+        </svg>	
+      </span>
+    </span>
+    <span class="switch__led"></span>
+    <span class="switch__text">Power</span>
+  </label> -->
+
+  <script src="./js/pong.js"></script>
+  <script src="./js/puzzle15.js"></script>
+</body>
+</html>
